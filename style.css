@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    /* children's bigadte nahi hai */
+    position: relative;
+}
+
+.nav{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    /* flex se children's ek hi line mein aajate hai */
+    display: flex; 
+    /* align-item-->x-axis ke along */
+    align-items: center;
+    justify-content: space-between;
+    /* jitna padding derahe ho utna hi neeche bhi dena hai, alignment sahi rehti hai */
+    padding: 0vw 4vw;
+    /* border-bottom: 2px solid #dadada; */
+}
+
+.nav_part2{
+    display: flex;
+    /* background-color: blue; */
+    /* gap ek property hoi hai */
+    gap: 4vw;
+    align-items: center;
+}
+
+.nav h1{
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.nav h2{
+    font-size: 1.3vw;
+}
+
+.nav i{
+    font-size: 1.2vw;
+    font-weight: 800;
+    display: none;
+}
+
+.nav button{
+    font-size: 1.2vw;
+    padding: 0.7vw 1.6vw;
+}
+
+.content{
+    /* calc to use aritmetic calculation */
+    height: calc(100% - 100px);
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+
+
+.left{
+    height: 100%;
+    width: 55%;
+    /* background-color: red; */
+    padding: 5vw 4vw;
+}
+
+.left h1{
+    font-size: 4.1vw;
+    line-height: 4vw;
+}
+
+.left h1 span{
+    color: rgb(223, 88, 88);
+}
+
+.left p{
+    font-size: 2vw;
+    font-weight: 100;
+    /* width: 80%; */
+    color: #666;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+}
+
+button{
+    font-size: 1.35vw;
+    padding: 1.3vw 2.3vw;
+    background-color: rgb(223, 88, 88);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.right{
+    height: 100%;
+    width: 45%;
+    /* background-color: blue; */
+}
+
+.right img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* jese hi 600px hit karega ye property laga dena */
+@media (max-width:600px) {
+    .nav{
+        padding: 0 5vw;
+        height: 60px;
+    }
+
+    .nav button{
+        display: none;
+    }
+
+    .nav h1{
+        font-size: 4vw;
+    }
+    .nav h2{
+        font-size: 4vw;
+    }
+    .nav h2{
+        display: none;
+    }
+    .nav i{
+        display: block;
+        font-size: 6vw;
+    }
+    
+    .content{
+        height: calc(100% - 60px);
+        flex-direction: column;
+    }
+    .left{
+        height: 35%;
+        width: 100%;
+    }
+    .right{
+        height: 650%;
+        width: 100%;
+    }
+    .left h1{
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+
+    .left p{
+        font-size: 4vw;
+        width: 100%;
+        margin-top: 5vw;
+        margin-bottom: 6vw;
+    }
+
+    .content button{
+        font-size: 3vw;
+        padding: 3vw 4vw;
+        border-radius: 4px;
+    }
+}
